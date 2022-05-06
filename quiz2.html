@@ -10,18 +10,18 @@
 
 <body>
     <script>
-        let arr = [9, -5, -5, 8, -7, 7];
-        const findIndexElementOfArr = (number, arr) => {
-            for (let index in arr) {
-                if (arr[index] == number) {
-                    return index;
+        let arr = [6, 7, 8, -4, 10, 0, 5];
+        function findIndex(number, arr) {
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i] == number) {
+                    return `The number to look up in position is: ${i}`;
                 }
             }
             return -1;
             //   -1 có nghĩa là không tồn tại số nguyên đó ở trong mảng
         };
-
-        document.write(findIndexElementOfArr(8, arr));
+        let numberx = parseInt(prompt('Enter the number to look up in the array:'));
+        document.write(findIndex(numberx, arr));
     </script>
 </body>
 
